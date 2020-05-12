@@ -1,0 +1,324 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont,  "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Roboto ','DM Mono', sans-serif;
+  font-size: 16px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(197, 230, 250, 0.3)), to(rgba(219, 239, 248, 0.1)));
+  background: -o-linear-gradient(left, rgba(197, 230, 250, 0.3) 0%, rgba(219, 239, 248, 0.1) 100%);
+  background: linear-gradient(to right, rgba(197, 230, 250, 0.3) 0%, rgba(219, 239, 248, 0.1) 100%);
+  line-height: 1;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  position: relative;
+  padding-top: 3%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin-left: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 30;
+}
+
+.todo {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(49, 90, 136, 0.2)), color-stop(50%, rgba(69, 118, 141, 0.3)), to(rgba(63, 123, 146, 0.2)));
+  background: -o-linear-gradient(left, rgba(49, 90, 136, 0.2) 0%, rgba(69, 118, 141, 0.3) 50%, rgba(63, 123, 146, 0.2) 100%);
+  background: linear-gradient(to right, rgba(49, 90, 136, 0.2) 0%, rgba(69, 118, 141, 0.3) 50%, rgba(63, 123, 146, 0.2) 100%);
+  -webkit-box-shadow: 0px 3px 20px 2px rgba(50, 53, 50, 0.3);
+          box-shadow: 0px 3px 20px 2px rgba(50, 53, 50, 0.3);
+  border-radius: 10px;
+}
+
+.todo__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 30px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(150, 214, 223, 0.77)), to(rgba(27, 77, 82, 0.2)));
+  background: -o-linear-gradient(left, rgba(150, 214, 223, 0.77) 0%, rgba(27, 77, 82, 0.2) 100%);
+  background: linear-gradient(to right, rgba(150, 214, 223, 0.77) 0%, rgba(27, 77, 82, 0.2) 100%);
+  height: 50px;
+  border-bottom: 1px solid aquamarine;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.todo__title {
+  font-size: 35px;
+  font-family: 'DM Mono';
+  font-weight: 300;
+  color: #fff;
+}
+
+.pencil {
+  display: inline;
+}
+
+#pencil {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+#pencil:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#pencil:active {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.addList {
+  margin-top: 20px;
+  width: 90%;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid aqua;
+  outline: none;
+  font-family: 'DM Mono';
+  color: #444;
+}
+
+.todo__input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todo__list {
+  background: #fff;
+  width: 360px;
+  height: 410px;
+  margin: 20px auto 10px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid aqua;
+  overflow: auto;
+}
+
+.todo__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0 5px;
+  border-bottom: 1px solid rgba(50, 153, 167, 0.77);
+  -webkit-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.todo__trash {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.todo__trash:hover #trash {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.todo__trash:active #trash {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.todo__trash:hover {
+  background: rgba(44, 110, 163, 0.1);
+}
+
+.todo__trash:active {
+  background: transparent;
+}
+
+.todo__text {
+  font-size: 16px;
+  margin-left: 10px;
+  font-family: 'DM Mono';
+  font-weight: 300;
+  color: #444;
+}
+
+#trash {
+  width: 20px;
+  height: 20px;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.checked .todo__trash {
+  background: rgba(44, 110, 163, 0.1);
+}
+
+.checked {
+  text-decoration: line-through;
+  font-style: italic;
+  color: #14a801;
+}
+
+.checked .todo__text {
+  color: #7cfabb;
+}
+
+.buttons {
+  width: 360px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin: 0 auto;
+}
+
+.buttons__styles {
+  background: #3cd3e7;
+  border: none;
+  font-size: 15px;
+  font-family: 'DM Mono';
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.buttons__styles:hover {
+  background: #42b3c2;
+}
+
+.buttons__styles:active {
+  background: rgba(66, 179, 194, 0.3);
+}
+
+.overlay {
+  position: absolute;
+  width: 400px;
+  height: 0%;
+  background: #fff;
+  top: -20px;
+  left: 0%;
+  z-index: 200;
+  padding: 15px;
+  border: 1px solid rgba(39, 36, 77, 0.3);
+  opacity: 0;
+  -webkit-transition: all .2s linear .2s;
+  -o-transition: all .2s linear .2s;
+  transition: all .2s linear .2s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.overShow {
+  height: 100%;
+  opacity: 1;
+  top: 0;
+}
+
+.closeTips {
+  font-size: 20px;
+  color: #444;
+  -webkit-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.closeTips:hover {
+  color: #f34;
+}
+
+.closeTips:active {
+  color: #444;
+}
+
+.tips {
+  margin: 10px 0 25px 20px;
+}
+
+.tips li {
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 10px;
+  border: 1px solid rgba(243, 101, 101, 0.87);
+  margin: 20px 0;
+}

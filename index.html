@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application To - Do</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="todo container" id="todo">
+            <div class="todo__header" id="todo__header">
+                <h1 class="todo__title">Today</h1>
+                <div class="pencil">
+                    <img src="img/pen.svg" alt="Pencil" id="pencil">
+                </div>
+            </div>
+            
+            <div class="todo__input">
+                <input type="text" class="addList" placeholder="Add New Todo" id="input">
+            </div>
+    
+            <ul class="todo__list">
+
+            </ul>
+    
+            <div class="buttons">
+                <button class="save buttons__styles">Save</button>
+                <button class="clear buttons__styles">Clear</button>
+                <button class="showTips buttons__styles">Help</button>
+            </div>
+    
+            <div class="overlay" id="overlay"> 
+                <a href="javascript:void(0)" class="closeTips">&times;</a>
+                <ul class="tips">
+                    <li>Click on the pencil to hide or show input area</li>
+                    <li>Type text into input area and press enter to add todo to list</li>
+                    <li>Hover over the todo and click the on trash can to delete</li>
+                    <li>Click the clear button to clear all todos from list</li>
+                    <li>Click the Save button to save your todos to access them later even if you exit the browser </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
