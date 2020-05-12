@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6, p {
 .todo__list {
   background: #fff;
   width: 360px;
-  height: 410px;
+  height: 450px;
   margin: 20px auto 10px;
   border-radius: 5px;
   padding: 10px;
@@ -250,7 +250,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .buttons {
-  width: 360px;
+  width: 50px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -259,12 +259,14 @@ h1, h2, h3, h4, h5, h6, p {
       -ms-flex-pack: distribute;
           justify-content: space-around;
   margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: -50px;
 }
-
 .buttons__styles {
   background: #3cd3e7;
   border: none;
-  font-size: 15px;
+  font-size: 12px;
   font-family: 'DM Mono';
   padding: 5px 10px;
   cursor: pointer;
@@ -272,6 +274,7 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-transition: all .1s linear;
   -o-transition: all .1s linear;
   transition: all .1s linear;
+  margin-bottom: 10px;
 }
 
 .buttons__styles:hover {
