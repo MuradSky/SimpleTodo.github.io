@@ -255,6 +255,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
@@ -262,6 +263,7 @@ h1, h2, h3, h4, h5, h6, p {
   position: absolute;
   top: 0;
   left: -50px;
+  
 }
 .buttons__styles {
   background: #3cd3e7;
