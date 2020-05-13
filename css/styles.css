@@ -289,10 +289,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 .overlay {
   position: absolute;
-  width: 400px;
-  height: 0%;
+  width: 0;
+  height: 100%;
   background: #fff;
-  top: -20px;
+  top: 0;
   left: 0%;
   z-index: 200;
   padding: 15px;
@@ -306,9 +306,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .overShow {
-  height: 100%;
-  opacity: 1;
-  top: 0;
+    opacity: 1;
+    width: 100%;
 }
 
 .closeTips {
