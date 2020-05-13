@@ -261,8 +261,8 @@ h1, h2, h3, h4, h5, h6, p {
           justify-content: space-around;
   margin: 0 auto;
   position: absolute;
-  top: 0;
-  left: -50px;
+  top: 10px;
+  left: -60px;
   
 }
 .buttons__styles {
